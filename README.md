@@ -1,9 +1,11 @@
-Comision: 007
-Grupo: 7
-
-Integrantes
+# Comision: 007  -  Grupo: 7
+ ---
+## Integrantes
 
 IGNACIO MANSO
+
 VALENZUELA FLORES MARTA LORETO
+
 YNDRID QUIJADA
+
 ROBERTO RIVERA ALIAGA
