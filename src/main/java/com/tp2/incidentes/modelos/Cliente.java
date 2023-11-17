@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.tp2.incidentes.modelos.*;
+
 @Entity
 @Table(name = "cliente") 
 public class Cliente {
@@ -98,38 +100,61 @@ public class Cliente {
 	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
-
-	// Obtiene la lista de incidentes actualmente asignados al técnico.
-	public List<Incidente> obtenerIncidentesAsignados() {
-		return null;
-	}
-
+	
 	/*
-	 * public void marcarIncidenteComoResuelto(Incidente incidente, String
-	 * comentarios){} //Marca un incidente como resuelto y proporciona comentarios
-	 * sobre la resolución.
-	 * 
-	 * public void configurarMedioNotificacionPreferido(MedioNotificacion medio){}
-	 * //Configura el medio de notificación preferido (por ejemplo, Email o
-	 * WhatsApp) para el técnico.
-	 * 
-	 * public Estadisticas obtenerEstadisticasDesempeno(int dias){} //Obtiene
-	 * estadísticas de desempeño del técnico para los últimos N días.
-	 * 
-	 * public List<Especialidad> obtenerEspecialidades(){} //Obtiene la lista de
-	 * especialidades que tiene el técnico.
-	 * 
-	 * public void configurarTiempoEstimadoPorDefecto(TipoProblema tipoProblema, int
-	 * tiempoEstimado){} //Configura el tiempo estimado de resolución por defecto
-	 * para un tipo de problema específico.
-	 * 
-	 * public int obtenerTiempoEstimadoProblema(TipoProblema tipoProblema){}
-	 * //Obtiene el tiempo estimado de resolución configurado para un tipo de
-	 * problema específico.
-	 * 
-	 * public List<Notificacion> obtenerNotificacionesPendientes(){} //Obtiene la
-	 * lista de notificaciones pendientes para el técnico.
-	 * 
-	 * public void registrarDisponibilidad(HorarioDisponibilidad horario){}
-	 * //Registra la disponibilidad del técnico para asignación de incidentes.
-	 */}
+	 * METODOS
+	*/
+	
+	// Obtiene la lista de servicios contratados por el cliente.
+	public List<Servicio> obtenerServiciosContratados() {
+		
+	} 
+	
+	// Permite al cliente reportar un nuevo incidente.
+	public void reportarIncidente(Servicio servicio,  tipoincidente tempo, String descripcion) {
+		
+	} 
+	
+	// Obtiene la lista de incidentes reportados por el cliente.
+	public List<Incidente> obtenerIncidentesReportados() {
+		
+		return null;
+	} 
+	
+	// Permite al operador actualizar sus datos registrados.
+	public void actualizarDatos(String nuevaRazonSocial, String nuevoCuit) {
+		
+	} 
+	
+	// Devuelve una cadena con detalles importantes del cliente para mostrar o registrar.
+	public String obtenerDetalles() {
+		
+		return null;
+	} 
+	
+	// Permite al operador agregar un nuevo servicio contratado.
+	public void agregarServicioContratado(Servicio nuevoServicio) {
+		
+	} 
+	
+	// Permite al operador eliminar un servicio contratado.
+	public void eliminarServicioContratado(Servicio servicio) {
+		
+	} 
+	
+	// Obtiene el estado de los incidentes reportados por el cliente (por ejemplo, si alguno está pendiente, resuelto, etc.).
+	public EstadoCliente obtenerEstadoIncidentes() {
+		
+	} 
+	
+	// Obtiene la lista de notificaciones enviadas al cliente.
+	public List<Notificacion> obtenerNotificaciones() {
+		
+	} 
+	
+	// Obtiene el último incidente reportado por el cliente.
+	public Incidente obtenerUltimoIncidenteReportado() {
+		
+	} 
+	
+}

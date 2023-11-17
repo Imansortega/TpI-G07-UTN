@@ -1,8 +1,11 @@
 package com.tp2.incidentes.modelos;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.*;
+
+import com.tp2.incidentes.modelos.*;
 
 @Entity
 @Table(name = "incidentes")
@@ -98,6 +101,54 @@ public class Incidente {
 		this.estado = estado;
 	}
 	
+	/*
+	 * METODOS
+	*/
 	
+	// Asigna un técnico al incidente.
+	public void asignarTecnico(Tecnico tecnico) {	
+	
+	} 
+	
+	// Obtiene el tiempo estimado de resolución para el incidente. Se hace automático o desde el operador si el incidente es COMPLEJO
+	public int obtenerTiempoEstimadoResolucion() {
+		
+		return 0;
+	} 
+	
+	// Genera una notificación al cliente cuando se marca el incidente como resuelto.
+	public void generarNotificacionCliente() {
+		
+	} 
+	
+	// Obtiene el estado actual del incidente.
+	public EstadoIncidente obtenerEstado() {} 
+	
+	// Obtiene el técnico asignado al incidente.
+	public Tecnico obtenerTecnicoAsignado() {
+		
+		return null;
+	} 
+	
+	// Agrega una descripcion relacionado al incidente.
+	public void agregarIncidenteRelacionado(Incidente incidente) {
+		
+	} 
+	
+	// Obtiene la lista de problemas
+	public List<Problema> obtenerProblemasRelacionados() {
+		
+	}
+	
+	// Obtiene el cliente asociado al incidente.
+	public Cliente obtenerCliente() {
+		return null;
+		
+	} 
+	
+	// cambia el estado del incidente de ASIGNADO / ENPROGRESO  /   A  RESUELTO  Marca el incidente como resuelto e incluye consideraciones o notas sobre la resolución.
+	public void MarcarComoResuelto (){
+		
+	} 
 
 }

@@ -1,11 +1,14 @@
 package com.tp2.incidentes.modelos;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import com.tp2.incidentes.modelos.*;
 
 @Entity
 @Table(name = "tecnico") 
@@ -101,5 +104,52 @@ public class Tecnico {
 		this.estado = estado;
 	}
 
+	/*
+	 * METODOS
+	*/
+	
+	// Obtiene la lista de incidentes actualmente asignados al técnico.
+	public List<Incidente> obtenerIncidentesAsignados() {
+		
+		return null;
+	} 
+	
+	// Marca un incidente como resuelto y proporciona comentarios sobre la resolución.
+	public void marcarIncidenteComoResuelto(Incidente incidente, String comentarios) {} 
+	
+	// Configura el medio de notificación preferido (por ejemplo, Email o WhatsApp) para el técnico.
+	public void configurarMedioNotificacionPreferido(MedioNotificacion medio) {
+		
+	} 
+	
+	// Obtiene estadísticas de desempeño del técnico para los últimos N días.
+	public Estadisticas obtenerEstadisticasDesempeno(int dias) {
+		
+	} 
+	
+	// Obtiene la lista de especialidades que tiene el técnico.
+	public List<Especialidad> obtenerEspecialidades() {
+		
+	} 
+	
+	// Configura el tiempo estimado de resolución por defecto para un tipo de problema específico.
+	public void configurarTiempoEstimadoPorDefecto(TipoProblema tipoProblema, int tiempoEstimado) {
+		
+	} 
 
+	// Obtiene el tiempo estimado de resolución configurado para un tipo de problema específico.
+	public int obtenerTiempoEstimadoProblema(TipoProblema tipoProblema) {
+		
+	} 
+
+	// Obtiene la lista de notificaciones pendientes para el técnico.
+	public List<Notificacion> obtenerNotificacionesPendientes() {
+		
+	} 
+
+	// Registra la disponibilidad del técnico para asignación de incidentes.
+	public void registrarDisponibilidad(HorarioDisponibilidad horario) {
+		
+	} 
+	
 }
