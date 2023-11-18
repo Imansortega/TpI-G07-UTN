@@ -15,9 +15,9 @@
 El DER y el diagrama de clases se encuentra en el directorio
 "Diagramas" del directorio raiz de la aplicación.
 
-* DER base de datos.jpeg
+* DER base de datos.jpeg --> para visualizar en README.md
 * DER base de datos.pdf
-* Diagrama de clases.jpeg
+* Diagrama de clases.jpeg --> para visualizar en README.md
 * Diagrama de clases.pdf
 
 #### Diagrama entidad relación
