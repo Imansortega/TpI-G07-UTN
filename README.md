@@ -26,4 +26,4 @@ El DER y el diagrama de clases se encuentra en el directorio
 
 ### Diagrama de clases
 
-![](Diagramas/Diagrama_de_ clases.jpeg "")
+![](Diagramas/Diagrama_de_clases.jpeg "")
