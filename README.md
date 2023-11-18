@@ -23,3 +23,7 @@ El DER y el diagrama de clases se encuentra en el directorio
 #### Diagrama entidad relación
 
 ![](Diagramas/DER_base_de_datos.jpeg "")
+
+### Diagrama de clases
+
+![](Diagramas/Diagrama_de_ clases.jpeg "")
