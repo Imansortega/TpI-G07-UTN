@@ -22,15 +22,19 @@ public class Main {
 		miClienteMemServ.saveCliente(newClient1);
 		miClienteMemServ.updateCliente(newClient1);
 		
-		// Save y update a Db
+		// Save y update a Db. Usar para crear nuevos registros solamente
 		//miClienteDbServ.update(newClient); 
 		//miClienteDbServ.update(newClient1);
+		
+		// Este lo pueden usar para actualizar la Razón Social
 		miClienteDbServ.actualizarRazonSocial(1,"Almacen de Lelu");
 		
 		// Impresion contenido instancia Cliente en mem
 		for (Cliente tempo : miClienteMemServ.getAllClientes()) {
 			System.out.println("@ Main, Razón Social: " + tempo.getRazonSocial());
 		}		
+		
+		System.out.println("#######################################");
 		
 		// Impresion contenido Db
 		for (Cliente tempo : miClienteDbServ.findAll()) {
