@@ -43,23 +43,3 @@ public class Main {
 	
 	}
 }
-
-
-
-// -------------------------------------------------------
-/*
- * EntityTransaction tx = em.getTransaction(); tx.begin();
- * 
- * em.persist(new Cliente(7,"Matias",888765)); tx.commit();
- */
-
-/*
- * Cliente miCliente = new Cliente(); 
- * miCliente.setIdCliente(6);
- * miCliente.setRazonSocial("El Ukraniano Borracho"); 
- * miCliente.setCuit(123321);
- * em.getTransaction().begin(); 
- * 
- * em.merge(miCliente);
- * em.getTransaction().commit();
- */
