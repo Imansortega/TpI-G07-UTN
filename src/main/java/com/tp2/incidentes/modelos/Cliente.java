@@ -1,14 +1,16 @@
 package com.tp2.incidentes.modelos;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
 
 import com.tp2.incidentes.modelos.*;
+import com.tp2.incidentes.tempo.*;
 
 @Entity
 @Table(name = "cliente") 
-public class Cliente {
+public class Cliente implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +37,23 @@ public class Cliente {
 
 	@Column(length = 1)
 	private boolean estado;
+	
+	public Cliente() {
+		
+	}
+	
+	public Cliente(String razonSocial, int cuit) {	
+		this.razonSocial = razonSocial;
+		this.cuit = cuit;
+		
+	}
+	
+	public Cliente(int idCliente, String razonSocial, int cuit) {	
+		this.idCliente = idCliente;
+		this.razonSocial = razonSocial;
+		this.cuit = cuit;
+		
+	}
 	
 	public int getIdCliente() {
 		return idCliente;
@@ -108,6 +127,7 @@ public class Cliente {
 	// Obtiene la lista de servicios contratados por el cliente.
 	public List<Servicio> obtenerServiciosContratados() {
 		
+		return null;
 	} 
 	
 	// Permite al cliente reportar un nuevo incidente.
@@ -145,16 +165,19 @@ public class Cliente {
 	// Obtiene el estado de los incidentes reportados por el cliente (por ejemplo, si alguno está pendiente, resuelto, etc.).
 	public EstadoCliente obtenerEstadoIncidentes() {
 		
+		return null;
 	} 
 	
 	// Obtiene la lista de notificaciones enviadas al cliente.
 	public List<Notificacion> obtenerNotificaciones() {
 		
+		return null;
 	} 
 	
 	// Obtiene el último incidente reportado por el cliente.
 	public Incidente obtenerUltimoIncidenteReportado() {
 		
+		return null;
 	} 
 	
 }

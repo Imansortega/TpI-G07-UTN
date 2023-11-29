@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import com.tp2.incidentes.modelos.*;
+import com.tp2.incidentes.tempo.*;
 
 @Entity
 @Table(name = "tecnico") 
@@ -125,11 +126,13 @@ public class Tecnico {
 	// Obtiene estadísticas de desempeño del técnico para los últimos N días.
 	public Estadisticas obtenerEstadisticasDesempeno(int dias) {
 		
+		return null;
 	} 
 	
 	// Obtiene la lista de especialidades que tiene el técnico.
 	public List<Especialidad> obtenerEspecialidades() {
 		
+		return null;
 	} 
 	
 	// Configura el tiempo estimado de resolución por defecto para un tipo de problema específico.
@@ -140,11 +143,13 @@ public class Tecnico {
 	// Obtiene el tiempo estimado de resolución configurado para un tipo de problema específico.
 	public int obtenerTiempoEstimadoProblema(TipoProblema tipoProblema) {
 		
+		return 0 ;
 	} 
 
 	// Obtiene la lista de notificaciones pendientes para el técnico.
 	public List<Notificacion> obtenerNotificacionesPendientes() {
 		
+		return null;
 	} 
 
 	// Registra la disponibilidad del técnico para asignación de incidentes.

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import com.tp2.incidentes.modelos.*;
+import com.tp2.incidentes.tempo.*;
 
 @Entity
 @Table(name = "incidentes")
@@ -122,7 +123,10 @@ public class Incidente {
 	} 
 	
 	// Obtiene el estado actual del incidente.
-	public EstadoIncidente obtenerEstado() {} 
+	public EstadoIncidente obtenerEstado() {
+		
+		return null;
+	} 
 	
 	// Obtiene el técnico asignado al incidente.
 	public Tecnico obtenerTecnicoAsignado() {
@@ -138,6 +142,7 @@ public class Incidente {
 	// Obtiene la lista de problemas
 	public List<Problema> obtenerProblemasRelacionados() {
 		
+		return null;
 	}
 	
 	// Obtiene el cliente asociado al incidente.

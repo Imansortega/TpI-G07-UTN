@@ -5,9 +5,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
-import lombok.Getter;
-import lombok.Setter;
 import com.tp2.incidentes.modelos.*;
+import com.tp2.incidentes.tempo.*;
 
 @Entity
 @Table(name = "cliente") 
@@ -91,6 +90,7 @@ public class Operador {
 	// Obtiene una lista de técnicos disponibles para resolver un incidente específico.
 	public List<Tecnico> obtenerTecnicosDisponibles(Servicio servicio, TipoProblema tipoProblema) {
 		
+		return null;
 	} 
 	
 	// Envia una notificación al cliente sobre el estado de su incidente.
