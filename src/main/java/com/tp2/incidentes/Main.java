@@ -10,7 +10,7 @@ public class Main {
 		
 		// Alta clientes
 		Cliente newClient = new Cliente("Lo de Pelos", 1187824334);
-		Cliente newClient1 = new Cliente("Almacen de Lele", 171812102);
+		Cliente newClient1 = new Cliente("Almacen de Pepito", 1718147102);
 		
 		// Instancio los servicios
 		ClienteDbService miClienteDbServ = new ClienteDbService();
@@ -27,7 +27,7 @@ public class Main {
 		//miClienteDbServ.update(newClient1);
 		
 		// Este lo pueden usar para actualizar la Razón Social
-		miClienteDbServ.actualizarRazonSocial(1,"Almacen de Lelu");
+		miClienteDbServ.actualizarRazonSocial(22,"Piripipi Guazú");
 		
 		// Impresion contenido instancia Cliente en mem
 		for (Cliente tempo : miClienteMemServ.getAllClientes()) {

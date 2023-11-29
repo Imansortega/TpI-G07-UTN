@@ -56,17 +56,4 @@ public abstract class AbstractJpaDAO< T extends Serializable > {
 	      tx.commit();
 	   }
 	   
-	   public void actualizarRazonSocial(int idCliente, String nuevaRazonSocial) {
-	        EntityTransaction tx = entityManager.getTransaction();
-	        tx.begin();
-
-	        Query query = entityManager.createQuery("UPDATE Cliente c SET c.razonSocial = :nuevaRazonSocial WHERE c.idCliente = :idCliente");
-	        query.setParameter("nuevaRazonSocial", nuevaRazonSocial);
-	        query.setParameter("idCliente", idCliente);
-
-	        int filasActualizadas = query.executeUpdate();
-
-	        tx.commit();
-	    }
-	   
 	}
