@@ -5,13 +5,9 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
 import com.tp2.incidentes.config.*;
 
-import com.tp2.incidentes.Main;
-
-import com.tp2.incidentes.modelos.*;
 
 public abstract class AbstractJpaDAO< T extends Serializable > {
 
