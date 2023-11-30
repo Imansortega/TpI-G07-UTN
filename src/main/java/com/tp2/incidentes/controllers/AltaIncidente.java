@@ -8,7 +8,7 @@ public class AltaIncidente {
 
 	public void altaDeUnIncidente(Incidente incidente) {		
 		IncidenteDbService darAltaIncidente = new IncidenteDbService();
-		darAltaIncidente.create(incidente);
+		darAltaIncidente.update(incidente);
 		
 	}
 }

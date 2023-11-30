@@ -3,7 +3,7 @@ package com.tp2.incidentes.services;
 import java.util.Collection;
 import java.util.List;
 
-import com.tp2.incidentes.DAO.ClienteDbDAO;
+import com.tp2.incidentes.DAO.TecnicoDbDAO;
 import com.tp2.incidentes.DAO.ClienteMemDAO;
 import com.tp2.incidentes.DAO.IncidenteDbDAO;
 import com.tp2.incidentes.modelos.Cliente;
@@ -13,11 +13,11 @@ public class IncidenteDbService {
 	//private Cliente miCliente = new Cliente();
 	private IncidenteDbDAO miIncidenteDbDAO = new IncidenteDbDAO();
 
-	public Cliente findOne(int id) {
+	public Incidente findOne(int id) {
 		return miIncidenteDbDAO.findOne(id);
 	}
 
-	public List<Cliente> findAll() {
+	public List<Incidente> findAll() {
 		return miIncidenteDbDAO.findAll();
 	}
 

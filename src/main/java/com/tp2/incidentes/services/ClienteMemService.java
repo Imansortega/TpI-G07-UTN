@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 
 import com.tp2.incidentes.DAO.ClienteMemDAO;
-import com.tp2.incidentes.DAO.ClienteDbDAO;
+import com.tp2.incidentes.DAO.TecnicoDbDAO;
 import com.tp2.incidentes.modelos.Cliente;
 
 public class ClienteMemService {

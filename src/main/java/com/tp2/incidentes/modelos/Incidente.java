@@ -1,6 +1,10 @@
 package com.tp2.incidentes.modelos;
 
-import java.sql.Date;
+import java.io.Serializable;
+//import java.sql.Date;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.persistence.*;
@@ -10,7 +14,7 @@ import com.tp2.incidentes.tempo.*;
 
 @Entity
 @Table(name = "incidentes")
-public class Incidente {
+public class Incidente implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,13 +34,34 @@ public class Incidente {
 	private String descripcionIncidente;
 	
 	@Column(length = 60)
-	private Date fechaApertura;
+	private String fechaApertura;
 	
 	@Column(length = 60)
-	private Date fechaCierre;
+	private String fechaCierre;
 	
 	@Column(length = 1)
 	private boolean estado;
+	
+	public Incidente() {
+	}
+
+	public Incidente (int idIncidente, int idTecnico, String tipoIncidente) {
+		this.idIncidente = idIncidente;
+		this.idTecnico = idTecnico;
+		this.tipoIncidente = tipoIncidente;
+	}
+	
+	public Incidente(int idIncidente, int idTecnico, int idCliente, String tipoIncidente, String descripcionIncidente,
+			String fechaApertura, String fechaCierre, boolean estado) {
+		this.idIncidente = idIncidente;
+		this.idTecnico = idTecnico;
+		this.idCliente = idCliente;
+		this.tipoIncidente = tipoIncidente;
+		this.descripcionIncidente = descripcionIncidente;
+        this.fechaApertura = fechaApertura;
+        this.fechaCierre = fechaCierre;
+		this.estado = estado;
+	}
 
 	public int getIdIncidente() {
 		return idIncidente;
@@ -78,19 +103,19 @@ public class Incidente {
 		this.descripcionIncidente = descripcionIncidente;
 	}
 
-	public Date getFechaApertura() {
+	public String getFechaApertura() {
 		return fechaApertura;
 	}
 
-	public void setFechaApertura(Date fechaApertura) {
+	public void setFechaApertura(String fechaApertura) {
 		this.fechaApertura = fechaApertura;
 	}
 
-	public Date getFechaCierre() {
+	public String getFechaCierre() {
 		return fechaCierre;
 	}
 
-	public void setFechaCierre(Date fechaCierre) {
+	public void setFechaCierre(String fechaCierre) {
 		this.fechaCierre = fechaCierre;
 	}
 

@@ -1,25 +1,33 @@
 package com.tp2.incidentes.vistas;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 import com.tp2.incidentes.controllers.AltaIncidente;
 import com.tp2.incidentes.controllers.VerDatosCliente;
+import com.tp2.incidentes.controllers.VerDatosTecnico;
 import com.tp2.incidentes.modelos.Incidente;
 
 public class MenuOperadorMesa {
-	
+
 	public void elMenuDeOperador() {
 		Scanner scanner = new Scanner(System.in);
 		AltaIncidente miAltaIncidente = new AltaIncidente();
 		VerDatosCliente miVistaDatosCliente = new VerDatosCliente();
-		Incidente incidente = new Incidente();
-		
+		VerDatosTecnico datosTecnico = new VerDatosTecnico();
+
+		SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+		// Date caca = formatoFecha.parse("30/11/2023");
+		Incidente incidente = new Incidente(2, 777, 999, "Internet", "No importa", "2023-11-30", "2023-11-30", true);
+
 		int opcion;
 
 		do {
 			System.out.println("\n\n******* Menu Operadores Mesa de Ayuda *******");
-			System.out.println("Menú:\n1. Ver datos del cliente\n2. Alta de incidente\n3. "
-					+ "Cierre Incidente\n4. Salir");
+			System.out.println("Menú:\n1. Ver datos del cliente\n2. Ver lista de técnicos\n3. Alta de incidente\n4. "
+					+ "Cierre Incidente\n5. Salir");
 			System.out.println("*********************************************");
 			System.out.print("\nSeleccione una opción: ---> ");
 
@@ -27,34 +35,34 @@ public class MenuOperadorMesa {
 
 			switch (opcion) {
 			case 1:
-				// System.out.printf("1\n");
-				// cls();
 				miVistaDatosCliente.datosCliente();
 				System.out.println("Presion una tecla para continuar...");
-		        scanner.nextLine();
-		        scanner.nextLine();
+				scanner.nextLine();
+				scanner.nextLine();
 				break;
 			case 2:
-				// System.out.printf("2\n");
-				//cls();
-				miAltaIncidente.altaDeUnIncidente(incidente);
+				datosTecnico.datosTecnico();
+				scanner.nextLine();
+				scanner.nextLine();
 				break;
 			case 3:
-				// System.out.printf("3\n");
-				cls();
+				datosTecnico.datosTecnico();
+				miAltaIncidente.altaDeUnIncidente(incidente);
 				break;
 			case 4:
+				break;
+			case 5:
 				System.out.println("\n1Saliendo del programa. ¡Hasta luego!\n");
 				break;
 			default:
 				System.out.println("Opción no válida. Por favor, seleccione una opción válida.\n2");
 			}
-			
-			System.out.println("\n\n");
-			
-		} while (opcion != 4);
 
-		//scanner.close(); //<---- No lo cierrro para habilitar menú principal. Ver !!!
+			System.out.println("\n\n");
+
+		} while (opcion != 5);
+
+		// scanner.close(); //<---- No lo cierrro para habilitar menú principal. Ver !!!
 
 	}
 
