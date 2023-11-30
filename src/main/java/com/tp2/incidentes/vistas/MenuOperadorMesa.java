@@ -1,8 +1,5 @@
 package com.tp2.incidentes.vistas;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 import com.tp2.incidentes.controllers.AltaIncidente;
@@ -18,8 +15,6 @@ public class MenuOperadorMesa {
 		VerDatosCliente miVistaDatosCliente = new VerDatosCliente();
 		VerDatosTecnico datosTecnico = new VerDatosTecnico();
 
-		SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
-		// Date caca = formatoFecha.parse("30/11/2023");
 		Incidente incidente = new Incidente(2, 777, 999, "Internet", "No importa", "2023-11-30", "2023-11-30", true);
 
 		int opcion;
