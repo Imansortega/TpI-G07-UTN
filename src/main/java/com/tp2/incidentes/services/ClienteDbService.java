@@ -1,13 +1,12 @@
 package com.tp2.incidentes.services;
 
-import java.util.Collection;
 import java.util.List;
 
 import com.tp2.incidentes.DAO.ClienteDbDAO;
 import com.tp2.incidentes.modelos.Cliente;
 
 public class ClienteDbService {
-	private Cliente miCliente = new Cliente();
+	
 	private ClienteDbDAO miClienteDbDAO = new ClienteDbDAO();
 
 	public Cliente findOne(int id) {

@@ -2,27 +2,21 @@ package com.tp2.incidentes.vistas;
 
 import java.util.Scanner;
 
-import com.tp2.incidentes.controllers.AltaIncidente;
 import com.tp2.incidentes.controllers.VerDatosCliente;
 import com.tp2.incidentes.controllers.VerDatosTecnico;
-import com.tp2.incidentes.modelos.Incidente;
 
-public class MenuOperadorMesa {
-
-	public void elMenuDeOperador(Scanner scanner) {
-
-		AltaIncidente miAltaIncidente = new AltaIncidente();
+public class MenuRrhh {
+	public void elMenuDeRrhh(Scanner scanner) {
+		//Scanner rrhhScanner = new Scanner(System.in);
 		VerDatosCliente miVistaDatosCliente = new VerDatosCliente();
 		VerDatosTecnico datosTecnico = new VerDatosTecnico();
-
-		//Incidente incidente = new Incidente(2, 777, 999, "Internet", "No importa", "2023-11-30", "2023-11-30", true);
 
 		int opcion;
 
 		do {
-			System.out.println("\n\n******* Menu Operadores Mesa de Ayuda *******");
+			System.out.println("\n\n******* Menu area RRHH *******");
 			System.out.println("Menú:\n1. Ver datos del cliente\n2. Ver lista de técnicos\n"
-					+ "3. Alta de incidente\n4. Cierre Incidente\n5. Salir");
+					+ "3. Alta de técnico\n4. Reporte Incidentes\n5. Salir");
 			System.out.println("*********************************************");
 			System.out.print("\nSeleccione una opción: ---> ");
 
@@ -41,11 +35,7 @@ public class MenuOperadorMesa {
 				scanner.nextLine();
 				scanner.nextLine();
 				break;
-			case 3:
-				/*
-				 * datosTecnico.datosTecnico(); miAltaIncidente.altaDeUnIncidente(incidente);
-				 */
-				miAltaIncidente.escanearIncidente(scanner);
+			case 3:			
 				break;
 			case 4:
 				break;
@@ -59,6 +49,8 @@ public class MenuOperadorMesa {
 			System.out.println("\n\n");
 
 		} while (opcion != 5);
+
+		//rrhhScanner.close(); //<---- No lo cierrro para habilitar menú principal. Ver !!!
 
 	}
 
@@ -81,5 +73,4 @@ public class MenuOperadorMesa {
 			System.out.println("No se pudo limpiar la consola: " + e.getMessage());
 		}
 	}
-
 }

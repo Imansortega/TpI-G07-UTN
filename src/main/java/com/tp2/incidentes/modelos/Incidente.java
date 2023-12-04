@@ -179,6 +179,15 @@ public class Incidente implements Serializable {
 	// cambia el estado del incidente de ASIGNADO / ENPROGRESO  /   A  RESUELTO  Marca el incidente como resuelto e incluye consideraciones o notas sobre la resolución.
 	public void MarcarComoResuelto (){
 		
+	}
+
+	@Override
+	public String toString() {
+		return "Incidente [idIncidente=" + idIncidente + ", idTecnico=" + idTecnico + ", idCliente=" + idCliente
+				+ ", tipoIncidente=" + tipoIncidente + ", descripcionIncidente=" + descripcionIncidente
+				+ ", fechaApertura=" + fechaApertura + ", fechaCierre=" + fechaCierre + ", estado=" + estado + "]";
 	} 
+	
+	
 
 }

@@ -7,33 +7,34 @@ import com.tp2.incidentes.controllers.*;
 public class MenuPrincipal {
 
 	public void elMenu() {
-		Scanner scanner = new Scanner(System.in);
+		Scanner mainScanner = new Scanner(System.in);
 		MenuOperadorMesa miMenuOperadorMesa = new MenuOperadorMesa();
-		
+		MenuRrhh miMenuRrhh = new MenuRrhh();
 		int opcion;
 
 		do {
+			
 			System.out.println("*********** Menu Principal ***********");
-			System.out.println("Elija su perfil:\n1. Operador\n2. Tecnico\n3. "
-					+ "Empleado RRHH\n4. Salir");
+			System.out.println("Elija su perfil:\n1. Operador\n2. Tecnico\n3. " + "Empleado RRHH\n4. Salir");
 			System.out.println("**************************************");
 			System.out.print("Seleccione una opción: ---> ");
 
-			opcion = scanner.nextInt();
+			opcion = mainScanner.nextInt();
 
 			switch (opcion) {
 			case 1:
 				// System.out.printf("1\n");
 				// cls();
-				miMenuOperadorMesa.elMenuDeOperador();
+				miMenuOperadorMesa.elMenuDeOperador(mainScanner);
 				break;
 			case 2:
 				// System.out.printf("2\n");
-				//cls();
-				
+				// cls();
+
 				break;
 			case 3:
 				// System.out.printf("3\n");
+				miMenuRrhh.elMenuDeRrhh(mainScanner);
 				cls();
 				break;
 			case 4:
@@ -42,12 +43,12 @@ public class MenuPrincipal {
 			default:
 				System.out.println("Opción no válida. Por favor, seleccione una opción válida.\n2");
 			}
-			
+
 			System.out.println("\n\n");
-			
+
 		} while (opcion != 4);
 
-		scanner.close();
+		mainScanner.close();
 
 	}
 
